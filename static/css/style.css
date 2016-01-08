@@ -1,3 +1,5 @@
+@import url('http://fonts.googleapis.com/css?family=Alef');
+
 .dropdown-arrow-inverse {
   border-bottom-color: #34495e !important;
   border-top-color: #34495e !important;
@@ -5,7 +7,7 @@
 /* styles from flat-ui-free2.0.0-fix.less files */
 body {
   color: #34495e;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: Alef, "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 14px;
   line-height: 1.231;
 }
@@ -13,7 +15,7 @@ input,
 button,
 select,
 textarea {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: Alef, "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 14px;
 }
 a {
@@ -824,7 +826,7 @@ body > .navbar-collapse .navbar-search .btn-primary:hover {
   color: #fff;
 }
 /**
- * Header 14 stylesheet  
+ * Header 14 stylesheet
  * */
 .header-14-sub {
   color: #bdc3c7;
@@ -846,7 +848,7 @@ body > .navbar-collapse .navbar-search .btn-primary:hover {
 .header-14-sub .h5,
 .header-14-sub h6,
 .header-14-sub .h6 {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: Alef, "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: white;
 }
 .header-14-sub h1 {
@@ -873,7 +875,7 @@ body > .navbar-collapse .navbar-search .btn-primary:hover {
   font-size: 13px;
   font-weight: normal;
   color: #ffffff;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: Alef, "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 800;
   letter-spacing: 2px;
 }
@@ -922,7 +924,7 @@ body > .navbar-collapse .navbar-search .btn-primary:hover {
   }
 }
 .header-14-sub .background {
-  background-image: url("../../startup/common-files/img/NY_001.jpg");
+  background-image: url("../../startup/common-files/img/room.jpeg");
   opacity: 20;
   filter: alpha(opacity=2000);
   opacity: 0.2;
@@ -997,7 +999,7 @@ body > .navbar-collapse .navbar-search .btn-primary:hover {
   }
 }
 /**
- * Content 10 stylesheet  
+ * Content 10 stylesheet
  * */
 .content-10 {
   padding-top: 130px;
@@ -1105,7 +1107,7 @@ body > .navbar-collapse .navbar-search .btn-primary:hover {
   color: #7f8c8d;
 }
 /**
- * Footer 3 stylesheet  
+ * Footer 3 stylesheet
  * */
 .footer-3 {
   font-size: 14px;
