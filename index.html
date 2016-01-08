@@ -33,7 +33,9 @@
         <div class="row">
           <div class="col-sm-8 col-sm-offset-2">
             <div class="header-14">
-              <a href="#"><img src="images/ruler-logo.png" height="auto" width="100px"/></a>
+              <a href="#">
+                <img src="images/ruler-logo.png" height="auto" width="100px" />
+              </a>
               <div>אינספקטו</div>
             </div>
             <div class="hero-unit">
@@ -43,20 +45,27 @@
             <p>הרשם היום כדי לקבל האפליקציה לפני כולם</p>
             <div class="row">
               <div class="subscribe-form col-sm-8 col-sm-offset-2">
-                <form method="get" action="server/process.php">
+                <form>
                   <div class="input-group">
-                    <input type="text" class="form-control" placeholder="buildingsomthing@gmail.com">
+                    <input type="text" class="form-control" id="myForm" name: "email" placeholder="buildingsomthing@gmail.com">
                     <span class="input-group-btn">
-                      <button class="btn btn-primary" type="button">תגידו לי כשזה קורה!</button>
+                      <button class="btn btn-primary" type="submit" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">תגידו לי כשזה קורה!</button>
                     </span>
                   </div>
                 </form>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="subscribe-form col-sm-8 col-sm-offset-2">
+                <span id="message"></span>
               </div>
             </div>
           </div>
         </div>
       </div>
     </section>
+
     <section class="content-10">
       <div class="container">
         <div class="row">
@@ -81,15 +90,14 @@
             </div>
           </div>
           <div class="col-sm-6">
-            <h3>פיצ'רים מדהימים'</h3>
+            <h3>אינספקטו סוגרת אותך מכל הפינות</h3>
 
-            <p>כאן נכניס את הפיצ'רים</p>
+            <p>מעקב חכם אחר תהליך הבנייה</p>
 
             <div class="features">
               <div class="box">
                 <img src="startup/common-files/icons/map@2x.png" width="100" height="100" alt="">
                 <h6>קל ונוח</h6>
-
                 <p>ממשק אינטואיטיבי וקל
                 </p>
               </div>
@@ -112,10 +120,12 @@
     <footer class="footer-3">
       <div class="container">
         <div class="row v-center">
-          <div class="col-sm-2">
-            <a class="brand" href="#">אינספקטו</a>
+          <div class="col-sm-4">
+
+            <a class="brand" href="#">
+              <img src="images/ruler-logo.png" height="auto" width="100px" /> אינספקטו</a>
           </div>
-          <div class="col-sm-7">
+          <div class="col-sm-5">
           </div>
           <div class="col-sm-3">
             <h6>תל אביב</h6>
@@ -142,7 +152,46 @@
     <script src="startup/common-files/js/jquery.backgroundvideo.min.js"></script>
     <script src="startup/common-files/js/froogaloop.min.js"></script>
     <script src="startup/common-files/js/startup-kit.js"></script>
+    <script src="assets/js/moment.js"></script>
+
   </div>
+
+  <script type="text/javascript">
+    $(function() {
+      $('form').on('submit', function(e) {
+        e.preventDefault();
+        var $email = $('#myForm').val();
+
+        if (validateEmail($email)) {
+          var now = moment().format('MMMM Do YYYY, h:mm:ss a');
+          $.ajax({
+              type: 'POST',
+              url: 'https://sheetsu.com/apis/462660b0',
+              data: {
+                timestamp: now,
+                email: $email
+              },
+              success: function() {
+                $("#message").text("אליפות! נשתמע בקרוב.");
+              },
+            error: function() {
+              $("#message").text("יוסטון יש לנו בעיה :|");
+            }});
+
+        } else {
+          console.log("shit");;
+          $("#message").text("על מי אתה עובד?");
+          return false;
+        }
+        return false;
+      });
+    })
+
+    function validateEmail(email) {
+      var re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+      return re.test(email);
+    }
+  </script>
 </body>
 
 </html>

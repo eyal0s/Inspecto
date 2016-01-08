@@ -63,3 +63,12 @@ h {
 .logo {
   background-image: url("../../images/ruler-logo.png");
 }
+
+.footer-3 .brand {
+  font-family: Alef;
+}
+
+
+.header-14-sub {
+  padding-top: 60px;
+}
