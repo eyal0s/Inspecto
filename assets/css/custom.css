@@ -57,7 +57,7 @@ h {
 }
 
 .header-14-sub .background {
-  opacity: 0.4;
+  opacity: 0.6;
 }
 
 .logo {
@@ -88,4 +88,23 @@ input {
   text-align: center;
   color: blue;
 
+}
+
+.move-to-section-arrow-wrapper .move-to-section-arrow {
+  display: block;
+  background: url("../../images/arrow.png") no-repeat bottom center;
+  height: 30px;
+  width: 50px;
+  margin: 20px auto;
+  cursor: pointer;
+  /*margin-top: 10px;*/
+}
+
+#arrow-container {
+  margin-top: 15px;
+}
+
+.footer-3 {
+  padding-top: 30px;
+  padding-bottom: 30px;
 }

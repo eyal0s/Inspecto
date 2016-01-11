@@ -52,7 +52,7 @@
             <div class="row">
               <div class="subscribe-form col-sm-8 col-sm-offset-2">
                 <form>
-                  <p>הירשמ\י עכשיו כדי להיות בין הראשונים לקבל אותה</p>
+                  <p style="color: #EDEFEF;">הירשמ\י עכשיו כדי להיות בין הראשונים לקבל אותה</p>
                   <div class="input-group">
                     <input type="text" class="form-control" id="myForm" name: "email" placeholder="my-email@gmail.com">
                     <span class="input-group-btn">
@@ -70,12 +70,20 @@
               </div>
             </div>
           </div>
+
+        </div>
+        <div class="row" id="arrow-container">
+          <div class="move-to-section-arrow-wrapper">
+            <a class="move-to-section-arrow" href="#arrow-target"></a>
+          </div>
         </div>
       </div>
 
     </section>
 
-    <section class="content-10">
+    <!-- ~~~~~~~~~~ CONTENT STRIP ~~~~~~~~~ -->
+
+    <section id="arrow-target" class="content-10">
       <div class="container">
         <div class="row">
           <div class="col-sm-4 col-sm-offset-2 text-center app-demo">
@@ -123,8 +131,6 @@
                 <h6>תיעוד מצולם ואיכותי</h6>
                 <p>הצילומים שנעשים נשמרים לשימוש עתידי, הם מאפשרים מעקב אחר תקלות וכאמצעי משפטי לפתרון סכסוכים בשלב מאוחר יותר</p>
               </div>
-
-              <!-- TODO: Change icon for a computer vision icon-->
               <div class="box">
                 <img src="startup/common-files/icons/Bulb@2x.png" width="100" height="100" alt="">
                 <h6>טכנולוגיה פורצת דרך</h6>
@@ -142,10 +148,12 @@
         <div class="row v-center">
           <div class="col-sm-3">
             <a class="brand" href="#">
-            <img src="images/Icon-72@2x.png" height="auto" width="72px" /> אינספקטו <p>מפקח הבנייה האישי שלך</p> </a>
+              <img src="images/Icon-72@2x.png" height="auto" width="72px" /> אינספקטו
+              <p>מפקח הבנייה האישי שלך</p>
+            </a>
           </div>
           <div class="col-sm-6">
-            <!-- <a href="#form"> הירשמ\י עכשיו כדי להיות בין הראשונים לקבל אותה</a> -->
+            <img src="images/coming-soon-appstore.png" height="auto" width="150px" />
           </div>
           <div class="col-sm-3">
             <h5>כתובת לפניות</h5>
@@ -179,6 +187,19 @@
   </div>
 
   <script type="text/javascript">
+    $(document).ready(function() {
+      var scrollToSpeed = 800;
+
+      $('.move-to-section-arrow').click(function() {
+        $('html, body').animate({
+          scrollTop: $('#arrow-target').offset().top
+        }, scrollToSpeed);
+        return false;
+      });
+
+    });
+
+
     $(function() {
       $('form').on('submit', function(e) {
         e.preventDefault();
@@ -187,18 +208,19 @@
         if (validateEmail($email)) {
           var now = moment().format('MMMM Do YYYY, h:mm:ss a');
           $.ajax({
-              type: 'POST',
-              url: 'https://sheetsu.com/apis/462660b0',
-              data: {
-                timestamp: now,
-                email: $email
-              },
-              success: function() {
-                $("#message").text("אליפות! נשתמע בקרוב.");
-              },
+            type: 'POST',
+            url: 'https://sheetsu.com/apis/462660b0',
+            data: {
+              timestamp: now,
+              email: $email
+            },
+            success: function() {
+              $("#message").text("אליפות! נשתמע בקרוב.");
+            },
             error: function() {
               $("#message").text("יוסטון יש לנו בעיה :|");
-            }});
+            }
+          });
 
         } else {
           console.log("shit");;
@@ -207,7 +229,7 @@
         }
         return false;
       });
-    })
+    });
 
     function validateEmail(email) {
       var re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
