@@ -761,7 +761,7 @@ body > .navbar-collapse .navbar-form .btn:hover, body > .navbar-collapse .navbar
   margin: 0 0 30px;
 }
 .header-14-sub .header-14 {
-  margin-bottom: 65px;
+  margin-bottom: 30px;
   text-align: center;
   font-size: 13px;
   font-weight: normal;
@@ -778,7 +778,7 @@ body > .navbar-collapse .navbar-form .btn:hover, body > .navbar-collapse .navbar
 }
 .header-14-sub .hero-unit {
   display: table;
-  border-collapse: collapse;
+  /*border-collapse: collapse;*/
   padding: 0;
   margin: 190px auto 170px;
   background: transparent;
@@ -787,9 +787,9 @@ body > .navbar-collapse .navbar-form .btn:hover, body > .navbar-collapse .navbar
 .header-14-sub .hero-unit > * {
   display: table-cell;
   vertical-align: middle;
-  border: 8px solid #fff;
+  /*border: 8px solid #fff;*/
   padding: 25px 30px;
-  text-align: left;
+  text-align: center;
 }
 .header-14-sub .hero-unit h1 {
   margin: 0;
@@ -797,6 +797,7 @@ body > .navbar-collapse .navbar-form .btn:hover, body > .navbar-collapse .navbar
   font-weight: normal;
   color: #ffffff;
   font-weight: 500;
+  text-align: center;
 }
 @media (max-width: 767px) {
   .header-14-sub .hero-unit h1 {
