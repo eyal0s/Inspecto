@@ -816,7 +816,7 @@ body > .navbar-collapse .navbar-form .btn:hover, body > .navbar-collapse .navbar
   }
 }
 .header-14-sub .background {
-  background-image: url("../../startup/common-files/img/room.jpeg");
+  background-image: url("../../startup/common-files/img/blueprint.gif");
   opacity: 20;
   filter: alpha(opacity=2000);
   opacity: 0.2;
@@ -950,7 +950,7 @@ body > .navbar-collapse .navbar-form .btn:hover, body > .navbar-collapse .navbar
   font-size: 30px;
   font-weight: normal;
   color: #2c3e50;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: Alef, "Helvetica Neue", Helvetica, Arial, sans-serif;
   margin-bottom: 48px;
   font-weight: 300;
 }
