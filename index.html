@@ -185,7 +185,7 @@
       $('form').on('submit', function(e) {
         e.preventDefault();
         var $email = $('#myForm').val();
-
+        var $variant = $('.var').attr('id');
         if (validateEmail($email)) {
           var now = moment().format('MMMM Do YYYY, h:mm:ss a');
           $.ajax({
@@ -193,10 +193,11 @@
             url: 'https://sheetsu.com/apis/462660b0',
             data: {
               timestamp: now,
-              email: $email
+              email: $email,
+              variant: $variant
             },
             success: function() {
-              $("#message").text("אליפות! נשתמע בקרוב.");
+              $("#message").text("אליפות! נשתמע בקרוב");
             },
             error: function() {
               $("#message").text("יוסטון יש לנו בעיה :|");
@@ -205,7 +206,7 @@
 
         } else {
           console.log("shit");;
-          $("#message").text("על מי אתה עובד?");
+          $("#message").text("נראה שהמייל לא תקין. אולי שוב?");
           return false;
         }
         return false;
