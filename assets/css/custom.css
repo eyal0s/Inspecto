@@ -43,11 +43,11 @@ h {
 }
 
 .content-10 .features p {
-  margin-right: 110px;
+  margin-right: 120px;
 }
 
 .content-10 .features h6 {
-  margin-right: 110px;
+  margin-right: 120px;
   font-family: Alef;
 }
 
@@ -73,7 +73,7 @@ h {
 }
 
 .content-10 .features .box {
-  padding-left: 100px;
+  padding-left: 30px;
 }
 
 input {
@@ -107,4 +107,9 @@ input {
 .footer-3 {
   padding-top: 40px;
   padding-bottom: 40px;
+}
+
+.content-10 {
+  padding-top: 85px;
+  padding-bottom: 85px;
 }
